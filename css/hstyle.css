@@ -1,0 +1,94 @@
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* e9eaec */
+.logo {
+  animation-name: showTextBig;
+  text-align: left;
+  opacity: 0;
+  animation: showText 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  padding: 3vh 0 0 2vw;
+  position: sticky;
+  padding-top: 20vh;
+  top: -20vh;
+  background-color: transparent;
+}
+
+.logo img {
+  width: 40%;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+  height: 80svh;
+  background: url(../assets/images/bookblock-JPHPdqZrB3I-unsplash.jpg) no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  background-position: center;
+  background-position: bottom;
+}
+
+h1 {
+  font-family: Oswald, Montserrat, arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+
+.motto {
+  width: 100%;
+  text-align: right;
+  z-index: 0.8;
+  padding: 3vw;
+  position: absolute;
+}
+
+@media all and (min-width: 450px) {
+  .logo{
+    top: -12vh;
+  }
+  .logo img {
+    width: clamp(120px,30%,340px);
+  }
+  .slide{
+    height: 115vh;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+
+
+  @keyframes showTextReduced {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .logo {
+    transform: translate(0, 0);
+    animation-name: showTextReduced;
+    animation-delay: 0.5s !important;
+  }
+}

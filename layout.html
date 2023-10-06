@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>This is the header</p>
+    </header>
+    <main>
+        <p>This is the body</p>
+    </main>
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+</body>
+
+
+<!-- method 1 -->
+<!-- <style >
+    *{
+        margin: 0;
+    }
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100svh;
+        /* justify-content: space-between; */
+        align-content: space-between;
+    }
+    p{
+        border: 2px solid;
+        text-align: center;
+    }
+    body>*{
+        width: 100%;
+    }
+</style> -->
+<style>
+    body{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        align-items: center;
+    }
+</style>
+</html>

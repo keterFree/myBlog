@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/937fb4a4f7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>This is the header</p>
+    </header>
+    <main>
+      <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" onkeyup="myFunction()" id="myInput" placeholder="search">
+        <p>This is the body</p>
+        <ul id="myUL">
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
+          
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+          
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Cindy</a></li>
+          </ul>
+    </main>
+    <footer>
+        <p>This is the footer</p>
+    </footer>
+</body>
+
+
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+<style>
+    main input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+    body{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        align-items: center;
+    }
+</style>
+</html>

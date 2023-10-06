@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("../assets/images/florian-klauer-mk7D-4UCfmg-unsplash.jpg");
+}
+
+
+.top {
+    list-style: none;
+    padding-left: 0;
+}
+
+.top li {
+    display: inline-block;
+    margin-inline: 2vw;
+}
+
+.top li form button {
+    background-color: transparent;
+    border: none;
+}
+
+.user {
+    position: absolute;
+}
+
+.top li a,
+.user,
+.top li form button {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+/* Avatar image */
+img.headavatar {
+    width: 10%;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+img.headavatar:hover {
+    width: 40%;
+    /* border-radius: 50%; */
+}
+
+.top li,
+.user,
+.top li form button {
+    padding: 2px;
+    background-color: transparent;
+    margin-bottom: 0.5vh;
+    border-radius: 2px;
+    backdrop-filter: blur(15px);
+    transition: 500ms;
+}
+
+.top li a:hover,
+.top li form button:hover,
+.top li a:focus {
+    text-decoration: underline;
+    color: rgb(32, 150, 110);
+}
+
+form {
+    max-width: 450px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Full screen */
+@media screen and (min-width: 500px) {
+    header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    .head {
+        justify-content: space-between;
+        align-content: space-between;
+        display: flex;
+        height: min-content;
+        border-bottom-right-radius: 25px;
+    }
+
+    .user {
+        max-width: 40%;
+    }
+
+    .top {
+        text-align: right;
+    }
+}
+
+/* small screen */
+@media screen and (max-width: 500px) {
+    .user {
+        position: relative;
+        text-align: right;
+        width: 100%;
+        padding: 2px;
+    }
+
+    .top {
+        margin-top: 3vw;
+        display: flex;
+        align-content: space-around;
+        justify-content: space-around;
+    }
+}
